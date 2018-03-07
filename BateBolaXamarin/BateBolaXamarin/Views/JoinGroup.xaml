@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Grupo" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:ci="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BateBolaXamarin.Views.JoinGroup">
+	<ContentPage.Content>
+        <StackLayout BackgroundColor="#EEEEEE" HorizontalOptions="Fill" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="End" HorizontalOptions="CenterAndExpand" Margin="10" Text="{Binding name}" FontSize="16" FontAttributes="Bold" />
+                <Label Margin="3" HeightRequest="1" FontAttributes="Bold" VerticalOptions="Center" Text="" BackgroundColor="#4FA952" />
+                <Label Margin="10" Text="Grupo criado por:" />
+                <StackLayout Margin="10" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <ci:CircleImage Aspect="Fill" VerticalOptions="Fill" x:Name="ownerAvatar" WidthRequest="60" HeightRequest="60" Source="{Binding owner.GetUserAvatar}" />
+                    <Label FontAttributes="Bold" VerticalOptions="Center" Text="{Binding owner.name}" />
+                </StackLayout>
+                <Label Margin="3" HeightRequest="1" FontAttributes="Bold" VerticalOptions="Center" Text="" BackgroundColor="#4FA952" />
+                <StackLayout Margin="10" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label x:Name="numberOfPlayersLabel" FontAttributes="Bold" VerticalOptions="Center" Text="{Binding users.Count}" />
+                    <Label FontAttributes="Bold" VerticalOptions="Center" Text="Membro(s)" />
+                </StackLayout>
+            <Button Clicked="HandleJoiningGroup" x:Name="joinGroupButton" BorderRadius="5" Margin="10" Text="Entrar no Grupo" FontAttributes="Bold" BackgroundColor="#4FA952" TextColor="White" VerticalOptions="End"  />
+        </StackLayout>
+
+	</ContentPage.Content>
+</ContentPage>

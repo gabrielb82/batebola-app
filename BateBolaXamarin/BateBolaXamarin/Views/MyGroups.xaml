@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:ci="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BateBolaXamarin.Views.MyGroups">
+	<ContentPage.Content>
+        <StackLayout HorizontalOptions="Fill" Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+                <Button x:Name="myGroupsButton" BorderWidth="1" BorderColor="#4FA952" BorderRadius="5" Margin="5,5,0,5" Text="Meus Grupos" Grid.Column="0" BackgroundColor="White" TextColor="#4FA952" Clicked="MyProjectsClicked"/>
+                <Button x:Name="publicGroupsButton" BorderRadius="5" Margin="0,5,5,5" Text="Grupos Publicos" Grid.Column="1" BackgroundColor="#4FA952" TextColor="White" Clicked="PublicProjectsClicked"/>
+            </Grid>
+            <SearchBar x:Name="groupsSearchBar" TextChanged="OnTextChanged" />
+            <ListView ItemTapped="ItemSelected" RowHeight="90" SeparatorVisibility="None" x:Name="listViewGroups" ItemsSource="{Binding}" VerticalOptions="FillAndExpand" BackgroundColor="#EEEEEE" HorizontalOptions="FillAndExpand"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="5" HorizontalOptions="FillAndExpand" BackgroundColor="#FFFFFF">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Label VerticalTextAlignment="Center" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" BackgroundColor="Transparent" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding name}" />
+                                <Image x:Name="approved" Source="{Binding isMemberIcon}" Grid.Row="0" Grid.Column="2" />
+                                <ci:CircleImage Margin="5" VerticalOptions="Center" HorizontalOptions="Center" Source="{Binding owner.GetUserAvatar}" HeightRequest="30" Grid.Row="1" Grid.Column="0" />
+                                <Label Grid.ColumnSpan="2" FontSize="12" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1" Text="{Binding owner.name, StringFormat='Criado por: {0}'}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

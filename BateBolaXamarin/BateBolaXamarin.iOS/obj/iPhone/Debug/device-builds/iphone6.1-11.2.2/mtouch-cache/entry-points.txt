@@ -1,0 +1,27 @@
+Function=xamarin_timezone_get_data
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_log
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/mscorlib.dll
+Function=CreateZStream
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/System.dll
+Function=CloseZStream
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/System.dll
+Function=Flush
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/System.dll
+Function=ReadZStream
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/System.dll
+Function=WriteZStream
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/System.dll
+Function=xamarin_start_wwan
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/System.dll
+Function=UIApplicationMain
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr
+	/Users/gabrielbarbosa/Projects/BateBolaXamarin/BateBolaXamarin/BateBolaXamarin.iOS/obj/iPhone/Debug/device-builds/iphone6.1-11.2.2/mtouch-cache/Link/Xamarin.iOS.dll
+Function=mono_pmip

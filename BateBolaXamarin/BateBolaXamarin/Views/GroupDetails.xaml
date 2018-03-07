@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Grupo" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:ci="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BateBolaXamarin.Views.GroupDetails">
+	<ContentPage.Content>
+        <Grid BackgroundColor="#EEEEEE" HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="AUTO"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="End" HorizontalOptions="CenterAndExpand" Margin="10" Text="{Binding name}" FontSize="16" FontAttributes="Bold" />
+            <Label Grid.Row="1" Margin="3" HeightRequest="1" FontAttributes="Bold" VerticalOptions="Start" Text="" BackgroundColor="#4FA952" />
+            <Label Grid.Row="2" Margin="10" Text="Grupo criado por:" />
+            <StackLayout Grid.Row="3" Margin="10" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <ci:CircleImage Aspect="Fill" VerticalOptions="Fill" x:Name="ownerAvatar" WidthRequest="60" HeightRequest="60" Source="{Binding owner.GetUserAvatar}" />
+                <Label FontAttributes="Bold" VerticalOptions="Center" Text="{Binding owner.name}" />
+            </StackLayout>
+            <Label Grid.Row="4" Margin="3" HeightRequest="1" FontAttributes="Bold" VerticalOptions="Start" Text="" BackgroundColor="#4FA952" />
+            <!--<Button Clicked="NewEvent" x:Name="newEventButton" BorderRadius="5" Margin="5" Image="icon_add.png" Text="Novo Evento" FontAttributes="Bold" BackgroundColor="#4FA952" TextColor="White" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />-->
+            <Label Grid.Row="5" x:Name="nextEventsLabel" Text="   Próximos Eventos" BackgroundColor="#CCCCCC" HorizontalOptions="FillAndExpand" />
+           
+            <ListView Grid.Row="6" ItemTapped="ViewEventParticipants" Margin="0,-5,0,0" RowHeight="90" SeparatorVisibility="None" x:Name="listViewEvents" ItemsSource="{Binding events}" VerticalOptions="Fill" BackgroundColor="Transparent" HorizontalOptions="Fill"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="5" HorizontalOptions="FillAndExpand" BackgroundColor="#FFFFFF">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" FontSize="12" VerticalTextAlignment="Center" Text="{Binding local}" />
+                                <Image Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Source="icon_next.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Label FontAttributes="Bold" Grid.Row="1" Grid.Column="0" FontSize="12" VerticalTextAlignment="Center" Text="{Binding dateTime, StringFormat='{}{0:\\Da\\ta: dd/MM/yyyy HH:mm}'}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Row="7" Clicked="NewEvent" x:Name="newEventButton" BorderRadius="5" Margin="5" Image="icon_new.png" Text="Novo Evento" FontAttributes="Bold" BackgroundColor="#4FA952" TextColor="White" VerticalOptions="End" />
+        </Grid>
+	</ContentPage.Content>
+</ContentPage>

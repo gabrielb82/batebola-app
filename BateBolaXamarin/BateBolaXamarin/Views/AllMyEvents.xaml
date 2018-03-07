@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="#EEEEEE" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BateBolaXamarin.Views.AllMyEvents">
+	<ContentPage.Content>
+        <ListView ItemTapped="ViewEventParticipants" Grid.Row="6" Margin="0,-5,0,0" RowHeight="120" SeparatorVisibility="None" x:Name="listViewEvents" ItemsSource="{Binding}" VerticalOptions="Fill" BackgroundColor="Transparent" HorizontalOptions="Fill"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="5" HorizontalOptions="FillAndExpand" BackgroundColor="#FFFFFF">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="AUTO" />
+                                </Grid.RowDefinitions>
+                                <Label Margin="5" Grid.Row="0" Grid.Column="0" FontSize="15" VerticalTextAlignment="Center" Text="{Binding group.name}" FontAttributes="Bold"/>
+                                <Label Margin="5" Grid.Row="1" Grid.Column="0" FontSize="12" VerticalTextAlignment="Center" Text="{Binding local}" />
+                                <Image Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Source="icon_next.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Label Margin="5" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" FontSize="12" VerticalTextAlignment="Center" Text="{Binding dateTime, StringFormat='{}{0:\\Da\\ta: dd/MM/yyyy HH:mm}'}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+	</ContentPage.Content>
+</ContentPage>

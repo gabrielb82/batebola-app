@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:BateBolaXamarin.Views;assembly=BateBolaXamarin" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BateBolaXamarin.Views.TabContainerPage">
+	<NavigationPage Title="Grupos" Icon="icon_group.png">
+        <x:Arguments>
+            <local:MyGroups Title="Grupos" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Eventos" Icon="icon_ball.png">
+        <x:Arguments>
+            <local:AllMyEvents Title="Eventos" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Notificações" Icon="icon_notification.png">
+        <x:Arguments>
+            <local:EventsList Title="Eventos" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Meus Dados" Icon="icon_user.png">
+        <x:Arguments>
+            <local:EventsList Title="Eventos" />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Novo Grupo" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BateBolaXamarin.Views.NewGroup">
+	<ContentPage.Content>
+        <StackLayout BackgroundColor="#EEEEEE" HorizontalOptions="Fill" Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <Label Margin="10,30,10,5" Text="Nome do Grupo:" />
+            <Entry Margin="10,5,10,5" x:Name="groupName" HorizontalOptions="FillAndExpand" />
+
+            <Button x:Name="newGroupButton" BorderRadius="5" Margin="10" Text="Criar Grupo" FontAttributes="Bold" BackgroundColor="#4FA952" TextColor="White" VerticalOptions="Start" Clicked="CreateGroup" />
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
